@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodZone Dining | Fine Dining in Lagos</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Internal Styles for Home Page -->
+  <style>
+    .featured-section { background-color: var(--off-white); }
+    .dish-card .card-image { height: 280px; }
+    .dish-price {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: var(--primary-blue);
+      color: var(--white);
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .about-preview-img {
+      border-radius: 8px;
+      height: 500px;
+      background: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800') center/cover;
+      box-shadow: var(--shadow);
+    }
+    .stat-box {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      color: var(--text-gray);
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .review-card {
+      background: var(--white);
+      padding: 40px;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary-blue);
+    }
+    .stars { color: #fbbf24; margin-bottom: 16px; font-size: 1.1rem; }
+    .cta-section {
+      background: linear-gradient(135deg, var(--dark-blue), var(--black));
+      color: var(--white);
+      text-align: center;
+    }
+    .cta-section h2 { color: var(--white); font-size: 2.8rem; margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">FoodZone Dining</a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="review.html" class="nav-link">Reviews</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-toggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section 1: Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Flavours of Lagos, Crafted with Care</h1>
+      <p>Fresh coastal seafood, classic Nigerian favourites, and modern Afro-fusion dishes inspired by Lagos' vibrant palate.</p>
+      <div class="hero-buttons">
+        <a href="services.html" class="btn btn-primary">Explore Menu</a>
+        <a href="contact.html" class="btn btn-outline">Reserve Table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Featured Dishes -->
+  <section class="section featured-section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Chef's Selection</h2>
+        <p>Signature dishes celebrating Lagos flavours — from coastal seafood to smoky suya-style grills.</p>
+      </div>
+      <div class="grid-4">
+        <div class="card dish-card animate-on-scroll stagger-1">
+          <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600');">
+            <span class="dish-price">₦14,500</span>
+          </div>
+          <div class="card-body">
+            <h3>Spicy Jollof Seafood Bowl</h3>
+            <p>Fragrant jollof rice topped with grilled prawns, peppers and a light shito butter.</p>
+          </div>
+        </div>
+        <div class="card dish-card animate-on-scroll stagger-2">
+          <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?w=600');">
+            <span class="dish-price">₦11,800</span>
+          </div>
+          <div class="card-body">
+            <h3>Suya-Spiced Beef Tenderloin</h3>
+            <p>Grilled beef with house suya spice, served with roasted yam and pepper sauce.</p>
+          </div>
+        </div>
+        <div class="card dish-card animate-on-scroll stagger-3">
+          <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600');">
+            <span class="dish-price">₦15,400</span>
+          </div>
+          <div class="card-body">
+            <h3>Grilled Branzino with Pepper Sauce</h3>
+            <p>Whole coastal sea bass with zesty pepper dressing and farm herbs.</p>
+          </div>
+        </div>
+        <div class="card dish-card animate-on-scroll stagger-4">
+          <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600');">
+            <span class="dish-price">₦12,800</span>
+          </div>
+          <div class="card-body">
+            <h3>Puff-Puff & Chocolate Drizzle</h3>
+            <p>Warm Nigerian puff-puff served with dark chocolate and tropical berry coulis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: About Preview -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="align-items: center;">
+        <div class="about-preview-img animate-on-scroll fade-left"></div>
+        <div class="animate-on-scroll fade-right">
+          <h2 style="font-size: 2.4rem; margin-bottom: 24px; color: var(--black);">Authentic Lagos Flavours Since 2012</h2>
+          <p style="color: var(--text-gray); margin-bottom: 20px; line-height: 1.8;">Founded by Akinnukawe Israel, FoodZone Dining blends coastal ingredients with contemporary technique to celebrate Nigerian cuisine.</p>
+          <p style="color: var(--text-gray); margin-bottom: 30px; line-height: 1.8;">We champion local producers and traditional flavours, served with modern flair to create memorable dining moments.</p>
+          <a href="about.html" class="btn btn-dark">Our Full Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Stats -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="grid-4">
+        <div class="stat-box animate-on-scroll stagger-1">
+          <span class="stat-number">12+</span>
+          <span class="stat-label">Years of Service</span>
+        </div>
+        <div class="stat-box animate-on-scroll stagger-2">
+          <span class="stat-number">80+</span>
+          <span class="stat-label">Signature Dishes</span>
+        </div>
+        <div class="stat-box animate-on-scroll stagger-3">
+          <span class="stat-number">30K</span>
+          <span class="stat-label">Happy Guests</span>
+        </div>
+        <div class="stat-box animate-on-scroll stagger-4">
+          <span class="stat-number">8</span>
+          <span class="stat-label">Local Awards</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Testimonials Preview -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Guest Experiences</h2>
+        <p>Read what our patrons say about their unforgettable evenings at FoodZone Dining.</p>
+      </div>
+      <div class="grid-3">
+        <div class="review-card animate-on-scroll stagger-1">
+          <div class="stars">★★★★★</div>
+          <p>"A true Lagos treasure — bold flavours and warm hospitality. The jollof seafood was unforgettable."</p>
+          <h4 style="margin-top: 20px; color: var(--black);">— Adaobi Nwosu</h4>
+        </div>
+        <div class="review-card animate-on-scroll stagger-2">
+          <div class="stars">★★★★★</div>
+          <p>"Beautiful presentation and vibrant flavours. Perfect for celebrations and date nights."</p>
+          <h4 style="margin-top: 20px; color: var(--black);">— Kunle Adebayo</h4>
+        </div>
+        <div class="review-card animate-on-scroll stagger-3">
+          <div class="stars">★★★★★</div>
+          <p>"Impeccable service and delicious food. Great spot for visitors who want to taste Lagos cuisine."</p>
+          <h4 style="margin-top: 20px; color: var(--black);">— Chika & Funke</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: CTA -->
+  <section class="section cta-section" style="padding-bottom: 180px;padding-top: 180px;">
+    <div class="container">
+      <div class="animate-on-scroll scale-in">
+        <h2>Reserve Your Table Today</h2>
+        <p style="font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto 40px;">Join us for an evening of exceptional cuisine, fine wines, and unforgettable ambiance. Reservations recommended.</p>
+        <a href="contact.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 40px;">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" style="padding-top: 130px; padding-bottom: 130px;">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>FoodZone Dining</h3>
+          <p>Celebrating Lagos flavours with coastal seafood, smoky grills, and contemporary Afro-fusion.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Fine Dining</a></li>
+            <li><a href="services.html">Catering</a></li>
+            <li><a href="services.html">Private Events</a></li>
+            <li><a href="services.html">Wine Cellar</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li>21 Victoria Island Road</li>
+            <li>Victoria Island, Lagos</li>
+            <li>+234 803 555 0147</li>
+            <li>reservations@foodzonedining.ng</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FoodZone Dining. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

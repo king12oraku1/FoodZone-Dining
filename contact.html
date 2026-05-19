@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | FoodZone Dining</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-hero { background-image: linear-gradient(135deg, rgba(2,6,23,0.9), rgba(30,58,138,0.8)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920'); }
+    .info-card {
+      background: var(--white);
+      padding: 50px 30px;
+      border-radius: 8px;
+      text-align: center;
+      border: 1px solid var(--border-gray);
+      transition: all 0.4s ease;
+    }
+    .info-card:hover {
+      border-color: var(--primary-blue);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-blue);
+    }
+    .info-icon {
+      width: 70px;
+      height: 70px;
+      background: var(--light-blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      color: var(--primary-blue);
+      font-size: 1.8rem;
+    }
+    .contact-form-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .map-placeholder {
+      height: 400px;
+      background: linear-gradient(135deg, var(--off-white), var(--light-blue));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: var(--text-gray);
+      border: 2px dashed var(--border-gray);
+    }
+    .accordion-item {
+      border-bottom: 1px solid var(--border-gray);
+    }
+    .accordion-header {
+      padding: 24px 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      color: var(--black);
+      transition: color 0.3s ease;
+    }
+    .accordion-header:hover { color: var(--primary-blue); }
+    .accordion-icon { transition: transform 0.3s ease; font-size: 1.2rem; }
+    .accordion-item.active .accordion-icon { transform: rotate(180deg); }
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      color: var(--text-gray);
+      line-height: 1.7;
+    }
+    .accordion-item.active .accordion-body {
+      max-height: 300px;
+      padding-bottom: 24px;
+    }
+    @media (max-width: 768px) {
+      .contact-form-container { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">FoodZone Dining</a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="review.html" class="nav-link">Reviews</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <!-- Section 1: Hero -->
+  <section class="page-hero contact-hero" style="height: 635px;">
+    <div>
+      <h1>Get In Touch</h1>
+      <p>Reservations, inquiries, or feedback — FoodZone Dining is here to help.</p>
+    </div>
+  </section>
+
+  <!-- Section 2: Contact Info -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="grid-3">
+        <div class="info-card animate-on-scroll stagger-1">
+          <div class="info-icon">📍</div>
+          <h3>Visit Us</h3>
+          <p style="color: var(--text-gray); margin-top: 12px;">21 Victoria Island Road<br>Victoria Island, Lagos<br>Nigeria</p>
+        </div>
+        <div class="info-card animate-on-scroll stagger-2">
+          <div class="info-icon">📞</div>
+          <h3>Call Us</h3>
+          <p style="color: var(--text-gray); margin-top: 12px;">Reservations: +234 803 555 0147<br>Catering: +234 803 555 0148<br>Events: +234 803 555 0149</p>
+        </div>
+        <div class="info-card animate-on-scroll stagger-3">
+          <div class="info-icon">🕐</div>
+          <h3>Opening Hours</h3>
+          <p style="color: var(--text-gray); margin-top: 12px;">Mon–Thu: 12:00 PM – 10:00 PM<br>Fri–Sat: 12:00 PM – 11:00 PM<br>Sun: 10:00 AM – 4:00 PM (Brunch)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Contact Form -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Send a Message</h2>
+        <p>For reservations, please call directly. For other inquiries, use the form below.</p>
+      </div>
+      <div class="contact-form-container">
+        <form class="animate-on-scroll fade-left" style="background: var(--white); padding: 50px; border-radius: 8px; box-shadow: var(--shadow); border: 1px solid var(--border-gray);">
+          <div class="grid-2" style="gap: 20px;">
+            <div class="form-group">
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-control" placeholder="John" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input type="text" class="form-control" placeholder="Doe" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" placeholder="+1 (555) 000-0000">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Subject</label>
+            <select class="form-control">
+              <option>General Inquiry</option>
+              <option>Reservation Request</option>
+              <option>Catering Question</option>
+              <option>Private Event</option>
+              <option>Feedback</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" placeholder="How can we help you?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+        </form>
+        <div class="animate-on-scroll fade-right">
+          <div style="margin-bottom: 40px;">
+            <h3 style="margin-bottom: 16px; color: var(--black);">Reservation Policy</h3>
+            <p style="color: var(--text-gray); line-height: 1.8; margin-bottom: 20px;">We recommend booking at least two weeks in advance for dinner reservations and one month for private events. A credit card hold is required for parties of 6 or more.</p>
+            <p style="color: var(--text-gray); line-height: 1.8;">Cancellations must be made 24 hours prior to your reservation to avoid a 10,000 NGN per person fee.</p>
+          </div>
+          <div>
+            <h3 style="margin-bottom: 16px; color: var(--black);">Dress Code</h3>
+            <p style="color: var(--text-gray); line-height: 1.8;">Smart elegant attire is required. Gentlemen are encouraged to wear collared shirts. Sportswear, shorts, and flip-flops are not permitted.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Map -->
+  <!-- <section class="section section-alt">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Find Us</h2>
+        <p>Located in the heart of Victoria Island's dining and entertainment district.</p>
+      </div>
+      <div class="map-placeholder animate-on-scroll scale-in">
+        <div style="font-size: 3rem; margin-bottom: 16px;">🗺️</div>
+        <p>Google Maps Embed Code Goes Here</p>
+        <p style="font-size: 0.9rem; margin-top: 8px;">Replace this div with your &lt;iframe&gt; map embed</p>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Section 5: FAQ -->
+  <section class="section">
+    <div class="container" style="max-width: 800px;">
+      <div class="section-header animate-on-scroll">
+        <h2>Frequently Asked Questions</h2>
+        <p>Quick answers to common questions.</p>
+      </div>
+      <div class="animate-on-scroll">
+        <div class="accordion-item active">
+          <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+            <span>Do you accommodate dietary restrictions?</span>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-body">
+            Absolutely. We offer vegetarian, vegan, gluten-free, and allergen-conscious menus. Please inform us of any dietary needs when making your reservation so our kitchen can prepare accordingly.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+            <span>Is there parking available?</span>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-body">
+            Valet parking is available Thursday through Sunday. There is also a public parking garage located opposite the restaurant. Street parking is limited.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+            <span>Can I host a private event on a Sunday?</span>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-body">
+            Yes, the Sapphire Room is available for private events seven days a week. Sunday events benefit from reduced minimums and flexible timing. Contact our events team for a custom quote.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+            <span>Do you offer gift certificates?</span>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-body">
+            Yes, gift certificates are available in denominations from $100 to $1,000. They can be purchased in-person or over the phone and are valid for one year from the date of issue.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+            <span>What is your corkage policy?</span>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-body">
+            We allow one bottle per couple with a corkage fee of 50000N` per bottle. The wine must not be featured on our current list. Large format bottles are subject to different pricing.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" style="height: 560px;">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>FoodZone Dining</h3>
+          <p>Celebrating Lagos flavours with coastal seafood, smoky grills, and contemporary Afro-fusion.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Fine Dining</a></li>
+            <li><a href="services.html">Catering</a></li>
+            <li><a href="services.html">Private Events</a></li>
+            <li><a href="services.html">Wine Cellar</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li>21 Victoria Island Road</li>
+            <li>Victoria Island, Lagos</li>
+            <li>+234 803 555 0147</li>
+            <li>reservations@foodzonedining.ng</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FoodZone Dining. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

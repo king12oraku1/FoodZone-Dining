@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews | FoodZone Dining</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .review-hero { background-image: linear-gradient(135deg, rgba(2,6,23,0.9), rgba(30,58,138,0.8)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1920'); }
+    .rating-big {
+      font-size: 6rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .rating-breakdown { margin-top: 30px; }
+    .rating-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+    .rating-bar-bg {
+      flex: 1;
+      height: 8px;
+      background: var(--border-gray);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .rating-bar-fill {
+      height: 100%;
+      background: var(--primary-blue);
+      border-radius: 4px;
+    }
+    .review-card-full {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 40px;
+      border: 1px solid var(--border-gray);
+      transition: all 0.3s ease;
+    }
+    .review-card-full:hover {
+      border-color: var(--primary-blue);
+      box-shadow: var(--shadow);
+    }
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .reviewer-info { display: flex; align-items: center; gap: 16px; }
+    .reviewer-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--light-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-blue);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .verified-badge {
+      color: #10b981;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .featured-quote {
+      font-size: 1.5rem;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--dark-gray);
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .quote-author {
+      text-align: center;
+      margin-top: 30px;
+      color: var(--text-gray);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">FoodZone Dining</a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="review.html" class="nav-link">Reviews</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <!-- Section 1: Hero -->
+  <section class="page-hero review-hero" style="height: 635px;">
+    <div>
+      <h1>Guest Reviews</h1>
+      <p>Authentic experiences shared by our patrons in Lagos and beyond.</p>
+    </div>
+  </section>
+
+  <!-- Section 2: Rating Overview -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="grid-2" style="align-items: center; max-width: 900px; margin: 0 auto;">
+        <div class="animate-on-scroll fade-left" style="text-align: center;">
+          <div class="rating-big">4.8</div>
+          <div class="stars" style="font-size: 1.5rem; margin-bottom: 12px;">★★★★★</div>
+          <p style="color: var(--text-gray);">Based on 3,247 verified reviews</p>
+        </div>
+        <div class="animate-on-scroll fade-right">
+          <div class="rating-breakdown">
+            <div class="rating-row">
+              <span style="min-width: 60px;">5 Stars</span>
+              <div class="rating-bar-bg"><div class="rating-bar-fill" style="width: 92%;"></div></div>
+              <span style="min-width: 40px; text-align: right;">92%</span>
+            </div>
+            <div class="rating-row">
+              <span style="min-width: 60px;">4 Stars</span>
+              <div class="rating-bar-bg"><div class="rating-bar-fill" style="width: 6%;"></div></div>
+              <span style="min-width: 40px; text-align: right;">6%</span>
+            </div>
+            <div class="rating-row">
+              <span style="min-width: 60px;">3 Stars</span>
+              <div class="rating-bar-bg"><div class="rating-bar-fill" style="width: 1.5%;"></div></div>
+              <span style="min-width: 40px; text-align: right;">1.5%</span>
+            </div>
+            <div class="rating-row">
+              <span style="min-width: 60px;">2 Stars</span>
+              <div class="rating-bar-bg"><div class="rating-bar-fill" style="width: 0.3%;"></div></div>
+              <span style="min-width: 40px; text-align: right;">0.3%</span>
+            </div>
+            <div class="rating-row">
+              <span style="min-width: 60px;">1 Star</span>
+              <div class="rating-bar-bg"><div class="rating-bar-fill" style="width: 0.2%;"></div></div>
+              <span style="min-width: 40px; text-align: right;">0.2%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Reviews Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Recent Reviews</h2>
+        <p>What our guests are saying about their recent visits.</p>
+      </div>
+      <div class="grid-3">
+        <div class="review-card-full animate-on-scroll stagger-1">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">SM</div>
+              <div>
+                <h4 style="margin-bottom: 4px;">Adaobi Nwosu</h4>
+                <span class="verified-badge">✓ Verified Visit</span>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p style="color: var(--text-gray); line-height: 1.7;">"The Chef's Tasting Menu celebrates local ingredients with creativity. A must-try for visitors to Lagos."</p>
+          <p style="margin-top: 16px; font-size: 0.85rem; color: var(--text-gray);">Dined: Chef's Tasting Menu • March 2026</p>
+        </div>
+        <div class="review-card-full animate-on-scroll stagger-2">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">JC</div>
+              <div>
+                <h4 style="margin-bottom: 4px;">Kunle Adebayo</h4>
+                <span class="verified-badge">✓ Verified Visit</span>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p style="color: var(--text-gray); line-height: 1.7;">"Exceptional flavours and service. The suya-spiced courses were a delightful surprise."</p>
+          <p style="margin-top: 16px; font-size: 0.85rem; color: var(--text-gray);">Dined: À La Carte • February 2026</p>
+        </div>
+        <div class="review-card-full animate-on-scroll stagger-3">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">EP</div>
+              <div>
+                <h4 style="margin-bottom: 4px;">Michael Soniyin</h4>
+                <span class="verified-badge">✓ Verified Visit</span>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p style="color: var(--text-gray); line-height: 1.7;">"Perfect venue for our anniversary — attentive staff and beautifully executed menu."</p>
+          <p style="margin-top: 16px; font-size: 0.85rem; color: var(--text-gray);">Event: Anniversary • January 2026</p>
+        </div>
+        <div class="review-card-full animate-on-scroll stagger-1">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">MR</div>
+              <div>
+                <h4 style="margin-bottom: 4px;">Amaka Eze</h4>
+                <span class="verified-badge">✓ Verified Visit</span>
+              </div>
+            </div>
+            <div class="stars">★★★★☆</div>
+          </div>
+          <p style="color: var(--text-gray); line-height: 1.7;">"Lovely atmosphere and great flavours. Small timing hiccup, but overall a fantastic evening."</p>
+          <p style="margin-top: 16px; font-size: 0.85rem; color: var(--text-gray);">Dined: Weekend Dinner • February 2026</p>
+        </div>
+        <div class="review-card-full animate-on-scroll stagger-2">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">AW</div>
+              <div>
+                <h4 style="margin-bottom: 4px;">David Kim</h4>
+                <span class="verified-badge">✓ Verified Visit</span>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p style="color: var(--text-gray); line-height: 1.7;">"The masterclass taught authentic techniques and local recipes. Great for food lovers."</p>
+          <p style="margin-top: 16px; font-size: 0.85rem; color: var(--text-gray);">Event: Masterclass • March 2026</p>
+        </div>
+        <div class="review-card-full animate-on-scroll stagger-3">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">DK</div>
+              <div>
+                <h4 style="margin-bottom: 4px;">Sade Olufemi</h4>
+                <span class="verified-badge">✓ Verified Visit</span>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <p style="color: var(--text-gray); line-height: 1.7;">"Memorable evening with excellent service. Ideal for special occasions and proposals."</p>
+          <p style="margin-top: 16px; font-size: 0.85rem; color: var(--text-gray);">Dined: Private Dinner • December 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Featured Quote -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="animate-on-scroll scale-in">
+        <div class="featured-quote">"FoodZone Dining celebrates Nigerian flavours with creativity and heart — a must-visit in Lagos."</div>
+        <div class="quote-author">
+          <strong style="color: var(--white);">— Local Food Guide</strong>
+          <p style="margin-top: 8px;">Highly recommended for seafood and Afro-fusion tasting menus</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Write Review CTA -->
+  <section class="section" style="background: linear-gradient(135deg, var(--light-blue), var(--white));">
+    <div class="container">
+      <div class="grid-2" style="align-items: center;">
+        <div class="animate-on-scroll fade-left">
+          <h2 style="font-size: 2.4rem; margin-bottom: 20px; color: var(--black);">Share Your Experience</h2>
+          <p style="color: var(--text-gray); line-height: 1.8; margin-bottom: 30px;">Your feedback helps us maintain the highest standards. We read every review and use your insights to refine our offerings.</p>
+          <a href="contact.html" class="btn btn-primary">Write a Review</a>
+        </div>
+        <div class="animate-on-scroll fade-right">
+          <div style="background: var(--white); padding: 40px; border-radius: 8px; box-shadow: var(--shadow); border-left: 4px solid var(--primary-blue);">
+            <h4 style="margin-bottom: 16px; color: var(--black);">Review Guidelines</h4>
+            <ul style="color: var(--text-gray); line-height: 2; list-style: none;">
+              <li>✓ Be specific about dishes and service</li>
+              <li>✓ Mention the date and occasion of visit</li>
+              <li>✓ Keep feedback constructive and honest</li>
+              <li>✓ Photos are welcome but not required</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" style="height: 565px;">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>FoodZone Dining</h3>
+          <p>Celebrating Lagos flavours with coastal seafood, smoky grills, and contemporary Afro-fusion.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Fine Dining</a></li>
+            <li><a href="services.html">Catering</a></li>
+            <li><a href="services.html">Private Events</a></li>
+            <li><a href="services.html">Wine Cellar</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li>21 Victoria Island Road</li>
+            <li>Victoria Island, Lagos</li>
+            <li>+234 803 555 0147</li>
+            <li>reservations@foodzonedining.ng</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FoodZone Dining. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

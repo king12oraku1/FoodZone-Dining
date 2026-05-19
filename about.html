@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | FoodZone Dining</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .timeline-item {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 60px;
+      align-items: flex-start;
+    }
+    .timeline-year {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--primary-blue);
+      font-weight: 700;
+      min-width: 100px;
+    }
+    .timeline-content h3 {
+      margin-bottom: 12px;
+      color: var(--black);
+    }
+    .team-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+    }
+    .team-card .card-body {
+      text-align: center;
+    }
+    .team-role {
+      color: var(--primary-blue);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .value-card {
+      text-align: center;
+      padding: 50px 30px;
+      background: var(--white);
+      border-radius: 8px;
+      border: 1px solid var(--border-gray);
+      transition: all 0.4s ease;
+    }
+    .value-card:hover {
+      border-color: var(--primary-blue);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-blue);
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 250px);
+      gap: 16px;
+    }
+    .gallery-item {
+      border-radius: 8px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover { transform: scale(1.03); }
+    .gallery-item:nth-child(1) { grid-column: 1 / 3; grid-row: 1 / 3; }
+    .gallery-item:nth-child(2) { grid-column: 3 / 4; grid-row: 1 / 2; }
+    .gallery-item:nth-child(3) { grid-column: 4 / 5; grid-row: 1 / 2; }
+    .gallery-item:nth-child(4) { grid-column: 3 / 4; grid-row: 2 / 3; }
+    .gallery-item:nth-child(5) { grid-column: 4 / 5; grid-row: 2 / 3; }
+    @media (max-width: 768px) {
+      .gallery-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .gallery-item:nth-child(1) { grid-column: 1; grid-row: auto; }
+      .timeline-item { flex-direction: column; gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">FoodZone Dining</a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="review.html" class="nav-link">Reviews</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <!-- Section 1: Page Hero -->
+  <section class="page-hero" style="height: 640px;">
+    <div>
+      <h1>Our Story</h1>
+      <p>Passionate about Lagos flavours, community, and coastal ingredients.</p>
+    </div>
+  </section>
+
+  <!-- Section 2: History Timeline -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Our Lagos Journey</h2>
+        <p>From a neighbourhood kitchen to a celebrated Lagos dining destination.</p>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-year">2012</div>
+          <div class="timeline-content">
+            <h3>The Beginning</h3>
+            <p style="color: var(--text-gray); line-height: 1.7;">Akinnukawe Israel opened a small coastal kitchen focused on fresh seafood and traditional Nigerian flavours with a modern touch.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-year">2016</div>
+          <div class="timeline-content">
+            <h3>Local Recognition</h3>
+            <p style="color: var(--text-gray); line-height: 1.7;">Our dedication to Lagos cuisine earned local awards and a devoted following across the city.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-year">2019</div>
+          <div class="timeline-content">
+            <h3>Expansion</h3>
+            <p style="color: var(--text-gray); line-height: 1.7;">We moved to our flagship Victoria Island location, expanded our menu, and launched private dining experiences.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-year">2026</div>
+          <div class="timeline-content">
+            <h3>Today & Beyond</h3>
+            <p style="color: var(--text-gray); line-height: 1.7;">Food continues to celebrate local producers while innovating traditional recipes for new audiences.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Team -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Meet Our Team</h2>
+        <p>The talented individuals behind every extraordinary plate.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card team-card animate-on-scroll stagger-1">
+          <img src="/assets/Gemini_Generated_Image_2ehni82ehni82ehn.png" alt="Executive Chef">
+          <div class="card-body">
+            <div class="team-role">Executive Chef</div>
+            <h3>Tunde Okafor</h3>
+            <p style="color: var(--text-gray); font-size: 0.9rem;">Lead Chef  behind FoodZone Dining's Afro-fusion approach.</p>
+          </div>
+        </div>
+        <div class="card team-card animate-on-scroll stagger-2">
+          <img src="/assets/Gemini_Generated_Image_rpfechrpfechrpfe.png" alt="Sous Chef">
+          <div class="card-body">
+            <div class="team-role">Sous Chef</div>
+            <h3>Amaka Eze</h3>
+            <p style="color: var(--text-gray); font-size: 0.9rem;">Specialist in West African flavors and contemporary presentation.</p>
+          </div>
+        </div>
+        <div class="card team-card animate-on-scroll stagger-3">
+          <img src="https://images.unsplash.com/photo-1566554273541-37a9ca77b91f?w=600" alt="Pastry Chef">
+          <div class="card-body">
+            <div class="team-role">Pastry Chef</div>
+            <h3>Chinedu Adeniyi</h3>
+            <p style="color: var(--text-gray); font-size: 0.9rem;">Pastry chef blending tropical fruit desserts with classic techniques.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Values -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Our Philosophy</h2>
+        <p>The four pillars that define every aspect of FoodZone Dining experience.</p>
+      </div>
+      <div class="grid-4">
+        <div class="value-card animate-on-scroll stagger-1">
+          <div class="icon-box">🌿</div>
+          <h3>Sustainability</h3>
+          <p style="color: var(--text-gray); font-size: 0.95rem;">We source 90% of our ingredients from local organic farms and sustainable fisheries.</p>
+        </div>
+        <div class="value-card animate-on-scroll stagger-2">
+          <div class="icon-box">🔬</div>
+          <h3>Innovation</h3>
+          <p style="color: var(--text-gray); font-size: 0.95rem;">Our R&D kitchen experiments with molecular gastronomy and fusion techniques.</p>
+        </div>
+        <div class="value-card animate-on-scroll stagger-3">
+          <div class="icon-box">🎨</div>
+          <h3>Artistry</h3>
+          <p style="color: var(--text-gray); font-size: 0.95rem;">Every plate is designed as a canvas, balancing color, texture, and composition.</p>
+        </div>
+        <div class="value-card animate-on-scroll stagger-4">
+          <div class="icon-box">🤝</div>
+          <h3>Hospitality</h3>
+          <p style="color: var(--text-gray); font-size: 0.95rem;">Genuine warmth and attentive service that makes every guest feel at home.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Gallery -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2 style="color: var(--white);">The Ambiance</h2>
+        <p>Step inside our warm interiors inspired by Lagos' coastal character and lively culture.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item animate-on-scroll scale-in" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800');"></div>
+        <div class="gallery-item animate-on-scroll stagger-1" style="background-image: url('https://images.unsplash.com/photo-1550966871-3ed3c47e2ce2?w=400');"></div>
+        <div class="gallery-item animate-on-scroll stagger-2" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400');"></div>
+        <div class="gallery-item animate-on-scroll stagger-3" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400');"></div>
+        <div class="gallery-item animate-on-scroll stagger-4" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400');"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" style="height: 500px;">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>FoodZone Dining</h3>
+          <p>Celebrating Lagos flavours with coastal seafood, smoky grills, and contemporary Afro-fusion.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Fine Dining</a></li>
+            <li><a href="services.html">Catering</a></li>
+            <li><a href="services.html">Private Events</a></li>
+            <li><a href="services.html">Wine Cellar</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li>21 Victoria Island Road</li>
+            <li>Victoria Island, Lagos</li>
+            <li>+234 803 555 0147</li>
+            <li>reservations@foodzonedining.ng</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FoodZone Dining. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

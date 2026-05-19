@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | FoodZone Dining</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .service-hero { background-image: linear-gradient(135deg, rgba(2,6,23,0.9), rgba(30,58,138,0.8)), url('https://images.unsplash.com/photo-1550966871-3ed3c47e2ce2?w=1920'); }
+    .service-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 80px; }
+    .service-detail.reverse { direction: rtl; }
+    .service-detail.reverse > * { direction: ltr; }
+    .service-img {
+      border-radius: 8px;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      box-shadow: var(--shadow);
+    }
+    .service-list { list-style: none; margin-top: 24px; }
+    .service-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border-gray);
+      color: var(--text-gray);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .service-list li::before {
+      content: '✓';
+      color: var(--primary-blue);
+      font-weight: 700;
+    }
+    .package-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 50px 40px;
+      text-align: center;
+      border: 2px solid var(--border-gray);
+      transition: all 0.4s ease;
+      position: relative;
+    }
+    .package-card.featured {
+      border-color: var(--primary-blue);
+      transform: scale(1.05);
+      box-shadow: var(--shadow-blue);
+    }
+    .package-card.featured::before {
+      content: 'MOST POPULAR';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary-blue);
+      color: var(--white);
+      padding: 6px 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      border-radius: 20px;
+    }
+    .package-price {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--black);
+      margin: 20px 0;
+    }
+    .package-price span { font-size: 1rem; color: var(--text-gray); font-weight: 400; }
+    @media (max-width: 768px) {
+      .service-detail, .service-detail.reverse { grid-template-columns: 1fr; direction: ltr; }
+      .service-detail.reverse > * { direction: ltr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">FoodZone Dining</a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="review.html" class="nav-link">Reviews</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <!-- Section 1: Hero -->
+  <section class="page-hero service-hero" style="height: 635px;">
+    <div>
+      <h1>Our Services</h1>
+      <p>From intimate dinners to grand celebrations, we craft Lagos-inspired experiences tailored to your needs.</p>
+    </div>
+  </section>
+
+  <!-- Section 2: Fine Dining -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Fine Dining Experience</h2>
+        <p>The heart of FoodZone Dining — where Lagos flavours meet refined service.</p>
+      </div>
+      <div class="service-detail">
+        <div class="service-img animate-on-scroll fade-left" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800');"></div>
+        <div class="animate-on-scroll fade-right">
+          <h3 style="font-size: 2rem; margin-bottom: 20px;">The Dining Room</h3>
+          <p style="color: var(--text-gray); line-height: 1.8; margin-bottom: 20px;">Our main dining room blends relaxed coastal vibes with elegant service. Choose from à la carte, our popular small plates, or the Chef's Tasting Experience.</p>
+          <ul class="service-list">
+            <li>7-Course Chef's Tasting Menu</li>
+            <li>Curated Beverage Pairings</li>
+            <li>Local & Seasonal Ingredients</li>
+            <li>Private Booths & Coastal Views</li>
+            <li>Live Music on Weekends</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Catering -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Catering Packages</h2>
+        <p>Bring FoodZone Dining to your venue with tailored catering for celebrations and corporate events.</p>
+      </div>
+      <div class="grid-3">
+        <div class="package-card animate-on-scroll stagger-1">
+          <h3>Essential</h3>
+          <div class="package-price">₦25,500<span> / person</span></div>
+          <ul class="service-list" style="text-align: left; margin-bottom: 30px;">
+            <li>3-Course Menu</li>
+            <li>2 Appetizer Selections</li>
+            <li>Coffee & Tea Service</li>
+            <li>Basic Table Settings</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline" style="color: var(--dark-gray); border-color: var(--dark-gray);">Inquire Now</a>
+        </div>
+        <div class="package-card featured animate-on-scroll stagger-2">
+          <h3>Signature</h3>
+          <div class="package-price">₦44,500<span> / person</span></div>
+          <ul class="service-list" style="text-align: left; margin-bottom: 30px;">
+            <li>5-Course Menu</li>
+            <li>5 Appetizer Selections</li>
+            <li>Premium Beverage Pairing</li>
+            <li>Elegant Table Settings</li>
+            <li>On-Site Chef Station</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Inquire Now</a>
+        </div>
+        <div class="package-card animate-on-scroll stagger-3">
+          <h3>Luxury</h3>
+          <div class="package-price">₦52,500<span> / person</span></div>
+          <ul class="service-list" style="text-align: left; margin-bottom: 30px;">
+            <li>7-Course Bespoke Menu</li>
+            <li>Unlimited Appetizers</li>
+            <li>Premium Champagne & Selections</li>
+            <li>Luxury Table Design</li>
+            <li>Dedicated Event Manager</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline" style="color: var(--dark-gray); border-color: var(--dark-gray);">Inquire Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Private Events -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Private Events</h2>
+        <p>Exclusive spaces for celebrations, corporate gatherings, and intimate occasions in Lagos.</p>
+      </div>
+      <div class="service-detail reverse">
+        <div class="service-img animate-on-scroll fade-right" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800');"></div>
+        <div class="animate-on-scroll fade-left">
+          <h3 style="font-size: 2rem; margin-bottom: 20px;">The Sapphire Room</h3>
+          <p style="color: var(--text-gray); line-height: 1.8; margin-bottom: 20px;">Our private dining room accommodates up to 40 guests and includes customizable menus, personalized service, and AV options for corporate events or private celebrations.</p>
+          <ul class="service-list">
+            <li>Capacity: 12 to 40 Guests</li>
+            <li>Custom Menu Development</li>
+            <li>AV Equipment & Projection</li>
+            <li>Private Entrance Available</li>
+            <li>Floral & Decor Coordination</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Special Services -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2 style="color: var(--white);">Exclusive Offerings</h2>
+        <p>Unique FoodZone Dining experiences designed for the discerning palate.</p>
+      </div>
+      <div class="grid-2">
+        <div class="animate-on-scroll stagger-1">
+          <div class="icon-box" style="background: rgba(59,130,246,0.2); color: var(--secondary-blue);">🍷</div>
+          <h3 style="color: var(--white); font-size: 1.5rem; margin-bottom: 16px;">Wine & Pairing Dinners</h3>
+          <p style="color: var(--text-gray); line-height: 1.7;">Intimate pairing dinners featuring curated wines and beverages alongside themed Lagos tasting menus.</p>
+        </div>
+        <div class="animate-on-scroll stagger-2">
+          <div class="icon-box" style="background: rgba(59,130,246,0.2); color: var(--secondary-blue);">👨‍🍳</div>
+          <h3 style="color: var(--white); font-size: 1.5rem; margin-bottom: 16px;">Chef's Table Experience</h3>
+          <p style="color: var(--text-gray); line-height: 1.7;">Sit at the kitchen counter and watch our team craft Lagos-inspired courses in real-time. Interact with the chefs and learn the stories behind each dish.</p>
+        </div>
+        <div class="animate-on-scroll stagger-3">
+          <div class="icon-box" style="background: rgba(59,130,246,0.2); color: var(--secondary-blue);">🌱</div>
+          <h3 style="color: var(--white); font-size: 1.5rem; margin-bottom: 16px;">Farm-to-Table Tours</h3>
+          <p style="color: var(--text-gray); line-height: 1.7;">Join occasional visits to partner farms and fisheries to learn about our ingredient sourcing, followed by a special farm lunch.</p>
+        </div>
+        <div class="animate-on-scroll stagger-4">
+          <div class="icon-box" style="background: rgba(59,130,246,0.2); color: var(--secondary-blue);">🎓</div>
+          <h3 style="color: var(--white); font-size: 1.5rem; margin-bottom: 16px;">Cooking Masterclasses</h3>
+          <p style="color: var(--text-gray); line-height: 1.7;">Monthly classes led by our chefs covering Nigerian classics, grilling techniques, and modern dessert methods. Includes lunch and a certificate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" style="height: 500px;">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>FoodZone Dining</h3>
+          <p>Celebrating Lagos flavours with coastal seafood, smoky grills, and contemporary Afro-fusion.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Fine Dining</a></li>
+            <li><a href="services.html">Catering</a></li>
+            <li><a href="services.html">Private Events</a></li>
+            <li><a href="services.html">Wine Cellar</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li>21 Victoria Island Road</li>
+            <li>Victoria Island, Lagos</li>
+            <li>+234 803 555 0147</li>
+            <li>reservations@FoodZonedinings.ng</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FoodZone Dining. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
